@@ -1,59 +1,49 @@
-## Introduction
+When your user navigates to another page (or reloads the current one) any changes they have made will be lost.
 
-Add project description here. What will learners be making? Broadly what skills will they be learning?
+You can keep the user's choices with the `localStorage` property.
 
-### What you will make
+`localStorage` holds data as key-value pairs. A ***key*** is a 'label' for a value.
 
---- no-print ---
-Add instructions for interacting with the embedded content here.
+### localStorage methods
 
-<div class="scratch-preview">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/160619869/?autostart=false" frameborder="0"></iframe>
-</div>
---- /no-print ---
++ setItem(key, value):
+Adds a key-value pair to localStorage.
+Example: `localStorage.setItem("username", "raspberry")`
 
---- print-only ---
-![Complete project](images/showcase_static.png)
---- /print-only ---
++ getItem(key):
+Retrieves the value associated with the specified key.
+Example: `var username = localStorage.getItem("username")`
 
---- collapse ---
++ removeItem(key):
+Removes the key-value pair associated with the specified key.
+Example: `localStorage.removeItem("username")`
+
++ clear():
+Removes all key-value pairs from localStorage.
+Example: `localStorage.clear()`
+
+### Checking localStorage when a page loads
+
+You can use `.addEventListener` to trigger a function in response to a page load event.
+
+Here is an example from the Comic character project in the More web path:
+
+--- code ---
 ---
-title: What you will need
----
-### Hardware
-
-+ A computer or tablet capable of running Scratch 3
-
-### Software
-
-+ Scratch 3 (either [online](https://scratch.mit.edu/){:target="_blank"} or [offline](https://scratch.mit.edu/download){:target="_blank"})
-+ Python 3
-+ This project can be completed in a web browser using [trinket.io](https://trinket.io/)
-
-### Downloads
-
-+ Download the project [starter file](https://rpf.io/p/en/projectName-go){:target="_blank"} if working offline
-
---- /collapse ---
-
---- collapse ---
----
-title: What you will learn
+language: js
 ---
 
-+ Learning objective 1
-+ Learning objective 2
-+ Learning objective 3
+document.addEventListener("DOMContentLoaded", function () {    
+  
+  if (localStorage.getItem("lightMode") == "true") {
+    document.body.classList.toggle("light-mode");
+    lightModeSwitch.checked = true;
+  }
 
---- /collapse ---
+});
+      
+--- /code ---
 
---- collapse ---
----
-title: Additional information for educators
----
+`"DOMContentLoaded"` is an `eventType` that is triggered when the webpage is ready. 
 
-You can download the completed project [here](https://rpf.io/p/en/projectName-get){:target="_blank"}.
-
-If you need to print this project, please use the [printer-friendly version](https://projects.raspberrypi.org/en/projects/projectName/print){:target="_blank"}.
-
---- /collapse ---
+**Tip:** It is better to use `"DOMContentLoaded"` here rather than the `"load"` eventType, which is only triggered when all images are loaded.
