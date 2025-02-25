@@ -1,32 +1,32 @@
-When your user navigates to another page (or reloads the current one) any changes they have made will be lost.
+When your user navigates to another page (or reloads the current one), any changes they have made will be lost.
 
-You can keep the user's choices with the `localStorage` property.
+Je kunt de keuze van de gebruiker behouden met de `localStorage` eigenschap.
 
-`localStorage` holds data as key-value pairs. A _**key**_ is a 'label' for a value.
+`localStorage` houdt gegevens vast als sleutel-waardeparen. A **key** is a 'label' for a value.
 
-### localStorage methods
+### localStorage methoden
 
 - setItem(key, value):
-  Adds a key-value pair to localStorage.
-  Example: `localStorage.setItem("username", "raspberry")`
+  Voegt een sleutel-waardepaar toe aan localStorage.
+  Voorbeeld: `localStorage.setItem("gebruikersnaam", "raspberry")`
 
 - getItem(key):
-  Retrieves the value associated with the specified key.
-  Example: `var username = localStorage.getItem("username")`
+  Haalt de waarde op die aan de opgegeven sleutel is gekoppeld.
+  Voorbeeld: `var gebruikersnaam = localStorage.getItem("gebruikersnaam")`
 
 - removeItem(key):
-  Removes the key-value pair associated with the specified key.
-  Example: `localStorage.removeItem("username")`
+  Verwijdert het sleutel-waardepaar dat aan de opgegeven sleutel is gekoppeld.
+  Voorbeeld: `localStorage.removeItem("gebruikersnaam")`
 
 - clear():
-  Removes all key-value pairs from localStorage.
-  Example: `localStorage.clear()`
+  Verwijdert alle sleutel-waardeparen uit localStorage.
+  Voorbeeld: `localStorage.clear()`
 
-### Checking localStorage when a page loads
+### LocalStorage controleren wanneer een pagina wordt geladen
 
-You can use `.addEventListener` to trigger a function in response to a page load event.
+Je kunt `.addEventListener` gebruiken om een functie te activeren als reactie op een pagina laden gebeurtenis.
 
-Here is an example from the Comic character project in the More web path:
+Hier is een voorbeeld van het Stripfiguur project in het Meer web pad:
 
 ## --- code ---
 
@@ -43,6 +43,6 @@ lightModeSwitch.checked = true;
 
 \--- /code ---
 
-`"DOMContentLoaded"` is an `eventType` that is triggered when the webpage is ready.
+`"DOMContentLoaded"` is een `eventType` dat wordt geactiveerd wanneer de webpagina klaar is.
 
-**Tip:** It is better to use `"DOMContentLoaded"` here rather than the `"load"` eventType, which is only triggered when all images are loaded.
+**Tip:** Het is beter om hier `"DOMContentLoaded"` te gebruiken in plaats van het eventType `"load"`, dat alleen wordt geactiveerd wanneer alle afbeeldingen zijn geladen.
