@@ -1,8 +1,8 @@
-When your user navigates to another page (or reloads the current one), any changes they have made will be lost.
+Wanneer je gebruiker naar een andere pagina gaat (of de huidige opnieuw laadt), gaan alle wijzigingen die hij heeft aangebracht verloren.
 
 Je kunt de keuze van de gebruiker behouden met de `localStorage` eigenschap.
 
-`localStorage` houdt gegevens vast als sleutel-waardeparen. A **key** is a 'label' for a value.
+`localStorage` houdt gegevens vast als sleutel-waardeparen. Een **sleutel** is een 'label' voor een waarde.
 
 ### localStorage methoden
 
