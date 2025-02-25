@@ -1,32 +1,32 @@
-When your user navigates to another page (or reloads the current one) any changes they have made will be lost.
+When your user navigates to another page (or reloads the current one), any changes they have made will be lost.
 
-You can keep the user's choices with the `localStorage` property.
+Tu peux conserver les choix de l'utilisateur avec la propriété `localStorage`.
 
-`localStorage` holds data as key-value pairs. A _**key**_ is a 'label' for a value.
+`localStorage` contient les données comme paires clé-valeur. A **key** is a 'label' for a value.
 
-### localStorage methods
+### Méthodes localStorage
 
 - setItem(key, value):
-  Adds a key-value pair to localStorage.
-  Example: `localStorage.setItem("username", "raspberry")`
+  Ajoute une paire clé-valeur à localStorage.
+  Exemple : `localStorage.setItem("nom d'utilisateur", "raspberry")`
 
 - getItem(key):
-  Retrieves the value associated with the specified key.
-  Example: `var username = localStorage.getItem("username")`
+  Récupère la valeur associée à la clé spécifiée.
+  Exemple : `var username = localStorage.getItem("nom d'utilisateur")`
 
 - removeItem(key):
-  Removes the key-value pair associated with the specified key.
-  Example: `localStorage.removeItem("username")`
+  Supprime la paire clé-valeur associée à la clé spécifiée.
+  Exemple : `localStorage.removeItem("nom d'utilisateur")`
 
 - clear():
-  Removes all key-value pairs from localStorage.
-  Example: `localStorage.clear()`
+  Supprime toutes les paires clé-valeur de localStorage.
+  Exemple : `localStorage.clear()`
 
-### Checking localStorage when a page loads
+### Vérifier localStorage lors du chargement d'une page
 
-You can use `.addEventListener` to trigger a function in response to a page load event.
+Tu peux utiliser `.addEventListener` pour déclencher une fonction en réponse à un événement de chargement de page.
 
-Here is an example from the Comic character project in the More web path:
+Voici un exemple provenant du projet Personnage de Comics du parcours Plus de web :
 
 ## --- code ---
 
@@ -43,6 +43,6 @@ lightModeSwitch.checked = true;
 
 \--- /code ---
 
-`"DOMContentLoaded"` is an `eventType` that is triggered when the webpage is ready.
+`"DOMContentLoaded"` est un `eventType` qui est déclenché lorsque la page web est prête.
 
-**Tip:** It is better to use `"DOMContentLoaded"` here rather than the `"load"` eventType, which is only triggered when all images are loaded.
+**Astuce :** il est préférable d'utiliser `"DOMContentLoaded"` ici plutôt que le type d'événement `"load"`, qui n'est déclenché que lorsque toutes les images sont chargées.
