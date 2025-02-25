@@ -1,8 +1,8 @@
-When your user navigates to another page (or reloads the current one) any changes they have made will be lost.
+When your user navigates to another page (or reloads the current one), any changes they have made will be lost.
 
 You can keep the user's choices with the `localStorage` property.
 
-`localStorage` holds data as key-value pairs. A ***key*** is a 'label' for a value.
+`localStorage` holds data as key-value pairs. A **key** is a 'label' for a value.
 
 ### localStorage methods
 
