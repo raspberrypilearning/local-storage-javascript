@@ -24,7 +24,7 @@ Je kunt de keuze van de gebruiker behouden met de `localStorage` eigenschap.
 
 ### LocalStorage controleren wanneer een pagina wordt geladen
 
-Je kunt `.addEventListener` gebruiken om een functie te activeren als reactie op een pagina laden gebeurtenis.
+Je kunt `.addEventListener` gebruiken om een functie te laten activeren als reactie op een pagina laden-gebeurtenis.
 
 Hier is een voorbeeld van het Stripfiguur project in het Meer web pad:
 
